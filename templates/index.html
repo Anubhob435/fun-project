@@ -1,0 +1,77 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Welcome to an Alternate Timeline</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="top-half mobile-padding">
+            <h1><i class="fas fa-portal-enter"></i> What If I failed class 10th...?</h1>
+            
+            <div class="top-sections-grid">
+                <div class="welcome-section card-hover">
+                    <h2><i class="fas fa-door-open"></i> Welcome Time Traveler</h2>
+                    <p>Ready to explore the multiverse of possibilities?</p>
+                </div>
+
+                <div class="about-section card-hover">
+                    <h2><i class="fas fa-compass"></i> The Journey</h2>
+                    <p>Share your alternate timeline stories and discover how different choices could have led to different outcomes.</p>
+                </div>
+
+                <div class="disclaimer-section card-hover">
+                    <h2><i class="fas fa-hat-wizard"></i> Reality Check</h2>
+                    <p>Remember: This is all hypothetical. Fun purposes only</p>
+                </div>
+
+                <div class="source-code-section card-hover">
+                    <h2><i class="fas fa-code-branch"></i> Behind The curtains</h2>
+                    <p>Curious how this works?</p>
+                    <a href="https://github.com/yourusername/project" class="github-link">
+                        <i class="fab fa-github"></i> Peek Behind The Curtain
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-half mobile-padding">
+            <div class="timeline-container">
+                <div class="stories-section">
+                    <h2><i class="fas fa-book-open"></i> Alternate Timelines</h2>
+                    <div class="stories-grid">
+                        <div id="left-column" class="stories-column">
+                            <!-- Left column stories -->
+                        </div>
+                        <div id="right-column" class="stories-column">
+                            <!-- Right column stories -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <form id="story-form" class="story-form card-hover">
+                        <h3><i class="fas fa-quill"></i> Write Your Story</h3>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="text" id="occupation" placeholder="Occupation" required>
+                        <textarea id="story" placeholder="Your Alternate Universe Story" required></textarea>
+                        
+                        <div class="color-picker">
+                            <label><i class="fas fa-palette"></i> Pick a Color:</label>
+                            <input type="color" id="color-picker" value="#6c5ce7">
+                        </div>
+                        
+                        <button type="submit"><i class="fas fa-wand-sparkles"></i> Cast Your Story</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
